@@ -18,6 +18,11 @@ spec:
         image: kydq2022/udagram-api-feed:latest
         ports:
         - containerPort: 8080
+        resources:
+          limits:
+            cpu: 500m
+          requests:
+            cpu: 200m
         env:
             - name: POSTGRES_HOST
               valueFrom:
